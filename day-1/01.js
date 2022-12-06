@@ -14,7 +14,34 @@ for (let i = 0; i < data.length; i++) {
         }
 }
 
-console.log(Math.max(...sums))
+// console.log(Math.max(...sums))
+
+// PART 2
+const threeHighestVal = () => {
+        let sortedArr = sums.sort((a, b) => b - a)
+
+        // console.log(sortedArr)
+        let highestValsArr = sortedArr.slice(0, 3)
+        // console.log(highestValsArr)
+        // let highestValsArr = []
+
+        // highestValsArr.push(max1)
+        // sums.splice(sums.indexOf(max1), 1);
+
+        // let max2 = Math.max.apply(null, sums)
+        // highestValsArr.push(max2)
+        // sums.splice(sums.indexOf(max2), 1);
+
+        // let max3 = Math.max.apply(null, sums)
+        // highestValsArr.push(max3)
+
+        let total = highestValsArr.reduce((a, b) => a + b)
+
+        console.log(total)
+}
+
+threeHighestVal()
+
 
         
 
